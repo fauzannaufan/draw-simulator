@@ -1,38 +1,139 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+}
+
+.pot-table {
+  display: inline-table;
+  width: calc(50% - 16px);
+  max-width: 200px;
+  margin: 8px;
+}
+
+.group-table {
+  max-width: 170px;
+}
+
+.group-table th,
+.group-table td {
+  padding: 4px;
+}
+
+.pot-table,
+.pot-table tr,
+.pot-table th,
+.pot-table td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.pot-table td {
+  text-align: left;
+}
+
+.pot-table .drawn {
+  opacity: 0.3;
+}
+
+.results-2legs {
+  width: calc(100% - 16px);
+  max-width: 300px;
+  margin: 8px auto;
+}
+
+.results-2legs,
+.results-2legs tr {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.results-2legs td:nth-child(1),
+.results-2legs td:nth-child(3) {
+  text-align: left;
+  width: 45%;
+  padding: 4px;
+}
+
+.results-2legs td:nth-child(2) {
+  width: 10%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.ball {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 4px;
+  cursor: pointer;
+  font-size: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.ball-red {
+  background: radial-gradient(
+    circle at 65% 15%,
+    white 1px,
+    #ff3b01 3%,
+    #761211 60%,
+    #ff3b01 100%
+  );
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.ball-green {
+  background: radial-gradient(
+    circle at 65% 15%,
+    white 1px,
+    #b1e902 3%,
+    #014c3e 60%,
+    #b1e902 100%
+  );
+}
+
+.ball-blue {
+  background: radial-gradient(
+    circle at 65% 15%,
+    white 1px,
+    #84b1fd 3%,
+    #1d2280 60%,
+    #84b1fd 100%
+  );
+}
+
+.ball-yellow {
+  background: radial-gradient(
+    circle at 65% 15%,
+    white 1px,
+    #ffff33 3%,
+    #999900 60%,
+    #ffff33 100%
+  );
+}
+
+h1,
+.center {
+  text-align: center;
+}
+
+button {
+  margin: 0 8px;
+}
+
+main {
+  margin-bottom: 32px;
+}
+
+@media only screen and (min-width: 992px) {
+  .rounds {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    gap: 16px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.rounds > div {
+  text-align: center;
 }
