@@ -1,6 +1,8 @@
-function Groups({ groups, teams }) {
+import { forwardRef } from 'react';
+
+const Groups = forwardRef(({ groups, teams }, ref) => {
   return (
-    <div>
+    <div ref={ref}>
       {groups.map((group, index) => (
         <table className="pot-table group-table" key={'group' + index}>
           <thead>
@@ -21,7 +23,16 @@ function Groups({ groups, teams }) {
                     />
                   ))}
                   &nbsp;
-                  {teams[team]?.name || team}
+                  <span className="label-desktop">
+                    {teams[team]?.name || team}
+                  </span>
+                  <span
+                    className={`label-mobile ${
+                      team.includes('/') ? 'label-small' : undefined
+                    }`}
+                  >
+                    {team}
+                  </span>
                 </td>
               </tr>
             ))}
@@ -30,6 +41,6 @@ function Groups({ groups, teams }) {
       ))}
     </div>
   );
-}
+});
 
 export default Groups;

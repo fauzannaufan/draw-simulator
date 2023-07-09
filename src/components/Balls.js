@@ -8,7 +8,7 @@ const shuffleArray = (array) => {
   return array;
 };
 
-function Balls({ pots, drawnTeams, chooseTeam, type }) {
+function Balls({ pots, drawnTeams, chooseTeam, type, revealTeams }) {
   const potToDisplay =
     type === 'alternating'
       ? drawnTeams.length % pots.length
@@ -29,7 +29,9 @@ function Balls({ pots, drawnTeams, chooseTeam, type }) {
                 pot.filter((team) => !drawnTeams.includes(team))
               ).map((team) => (
                 <div
-                  className={`ball ${ballClass[potToDisplay]}`}
+                  className={`ball ${ballClass[potToDisplay]} ${
+                    revealTeams ? 'reveal-team' : undefined
+                  }`}
                   key={team}
                   onClick={() => chooseTeam(team)}
                 >

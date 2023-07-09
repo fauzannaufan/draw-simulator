@@ -1,6 +1,8 @@
-function Results({ teams, results }) {
+import { forwardRef } from 'react';
+
+const Results = forwardRef(({ teams, results }, ref) => {
   return (
-    <div>
+    <div ref={ref}>
       <table className="results-2legs">
         <tbody>
           {results.map((result, index) => (
@@ -36,6 +38,6 @@ function Results({ teams, results }) {
       </table>
     </div>
   );
-}
+});
 
 export default Results;

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -14,6 +14,10 @@ body {
 
 .group-table {
   max-width: 170px;
+  /* background-image: url(https://pbs.twimg.com/profile_images/932515037188521984/CitBa0dn_400x400.jpg);
+  background-size: 15% 15%;
+  background-repeat: no-repeat;
+  background-position: 2px 2px; */
 }
 
 .group-table th,
@@ -62,8 +66,8 @@ body {
 }
 
 .ball {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
@@ -71,6 +75,12 @@ body {
   margin: 4px;
   cursor: pointer;
   font-size: 0;
+  margin-bottom: 16px;
+}
+
+.ball.reveal-team {
+  font-size: 11px;
+  color: white;
 }
 
 .ball-red {
@@ -126,14 +136,77 @@ main {
   margin-bottom: 32px;
 }
 
+.rounds > div {
+  text-align: center;
+}
+
+.div-select {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.div-select > h2 {
+  display: inline-block;
+}
+
+.download {
+  cursor: pointer;
+  margin: 0 4px;
+  color: blue;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* desktop only */
 @media only screen and (min-width: 992px) {
   .rounds {
     display: grid;
     grid-template-columns: 3fr 7fr;
     gap: 16px;
   }
+
+  .label-desktop {
+    display: inline-block;
+  }
+
+  .label-mobile {
+    display: none;
+  }
+
+  .div-select > select {
+    margin: 0 8px;
+    height: 21px;
+  }
 }
 
-.rounds > div {
-  text-align: center;
+/* mobile only */
+@media only screen and (max-width: 992px) {
+  .label-desktop {
+    display: none;
+  }
+
+  .label-mobile {
+    display: inline-block;
+  }
+
+  .label-small {
+    font-size: 8px;
+  }
+
+  .pot-table {
+    width: calc(25% - 4px);
+    margin: 2px;
+  }
+
+  .group-table td {
+    padding: 2px;
+  }
+
+  .rounds > .round-finished {
+    display: none;
+  }
+
+  .div-select {
+    margin-bottom: 8px;
+  }
 }

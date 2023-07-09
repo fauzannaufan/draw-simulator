@@ -24,7 +24,16 @@ function Pots({ teams, pots, drawnTeams }) {
                     />
                   ))}
                   &nbsp;
-                  {teams[team]?.name || team}
+                  <span className="label-desktop">
+                    {teams[team]?.name || team}
+                  </span>
+                  <span
+                    className={`label-mobile ${
+                      team.includes('/') ? 'label-small' : undefined
+                    }`}
+                  >
+                    {team}
+                  </span>
                 </td>
               </tr>
             ))}
