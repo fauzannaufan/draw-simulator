@@ -18,7 +18,10 @@ function Pots({ teams, pots, drawnTeams }) {
                   {team.split('/').map((el) => (
                     <img
                       key={el}
-                      src={`https://api.fifa.com/api/v3/picture/flags-sq-2/${el}`}
+                      src={`https://api.fifa.com/api/v3/picture/flags-sq-2/${el.substring(
+                        0,
+                        3
+                      )}`}
                       width="16"
                       alt={el}
                     />

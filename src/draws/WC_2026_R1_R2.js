@@ -5,10 +5,8 @@ import Pots from '../components/Pots';
 import Results from '../components/Results';
 import Balls from '../components/Balls';
 import Groups from '../components/Groups';
-import {
-  exportComponentAsJPEG,
-  exportComponentAsPNG,
-} from 'react-component-export-image';
+
+import './wc_2026.css';
 
 const pots = [
   ['IDN', 'TPE', 'MDV', 'YEM', 'AFG', 'SGP', 'MYA', 'NEP', 'CAM'],
@@ -177,34 +175,6 @@ function WC_2026_R1_R2() {
             )}
 
           <Groups teams={teams} groups={groups} ref={groupRef} />
-
-          {/* {pots.flat().length === drawnTeams.length &&
-            round2Pots.flat().length === drawnRound2Teams.length && (
-              <>
-                <label
-                  className="download"
-                  onClick={() =>
-                    exportComponentAsPNG(groupRef, {
-                      fileName:
-                        'World Cup 2026 Qualification Draw Simulation by Footyrankings',
-                    })
-                  }
-                >
-                  Download PNG
-                </label>
-                <label
-                  className="download"
-                  onClick={() =>
-                    exportComponentAsJPEG(groupRef, {
-                      fileName:
-                        'World Cup 2026 Qualification Draw Simulation by Footyrankings',
-                    })
-                  }
-                >
-                  Download JPEG
-                </label>
-              </>
-            )} */}
         </div>
       </div>
     </>

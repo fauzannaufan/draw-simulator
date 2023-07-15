@@ -1,0 +1,19 @@
+.pot-table {
+  max-width: 170px;
+}
+
+.group-table {
+  max-width: 200px;
+}
+
+.regions {
+  text-align: center;
+}
+
+@media only screen and (min-width: 992px) {
+  .regions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}

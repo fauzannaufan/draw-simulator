@@ -12,14 +12,6 @@ body {
   margin: 8px;
 }
 
-.group-table {
-  max-width: 170px;
-  /* background-image: url(https://pbs.twimg.com/profile_images/932515037188521984/CitBa0dn_400x400.jpg);
-  background-size: 15% 15%;
-  background-repeat: no-repeat;
-  background-position: 2px 2px; */
-}
-
 .group-table th,
 .group-table td {
   padding: 4px;
@@ -159,12 +151,6 @@ main {
 
 /* desktop only */
 @media only screen and (min-width: 992px) {
-  .rounds {
-    display: grid;
-    grid-template-columns: 3fr 7fr;
-    gap: 16px;
-  }
-
   .div-select > select {
     margin: 0 8px;
     height: 21px;

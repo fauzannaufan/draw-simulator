@@ -1,13 +1,16 @@
 import { forwardRef } from 'react';
 
-const Groups = forwardRef(({ groups, teams }, ref) => {
+const Groups = forwardRef(({ groups, teams, firstGroupLetter = 'A' }, ref) => {
   return (
     <div ref={ref}>
       {groups.map((group, index) => (
         <table className="pot-table group-table" key={'group' + index}>
           <thead>
             <tr>
-              <th>Group {String.fromCharCode(65 + index)}</th>
+              <th>
+                Group{' '}
+                {String.fromCharCode(firstGroupLetter.charCodeAt() + index)}
+              </th>
             </tr>
           </thead>
           <tbody>
