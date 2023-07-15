@@ -23,15 +23,8 @@ const Groups = forwardRef(({ groups, teams }, ref) => {
                     />
                   ))}
                   &nbsp;
-                  <span className="label-desktop">
+                  <span className="label-team">
                     {teams[team]?.name || team}
-                  </span>
-                  <span
-                    className={`label-mobile ${
-                      team.includes('/') ? 'label-small' : undefined
-                    }`}
-                  >
-                    {team}
                   </span>
                 </td>
               </tr>

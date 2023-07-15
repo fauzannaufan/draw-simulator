@@ -24,7 +24,7 @@ const options = [
     ],
   },
   {
-    value: 'AFC CL',
+    value: 'ACL',
     seasons: [
       {
         season: '2023-24',
@@ -67,7 +67,7 @@ function Select({ setSelectedDraw }) {
 
   return (
     <div className="div-select">
-      <h2>Footyrankings Draw Simulation</h2>
+      <h2>Footyrankings Draw Simulator</h2>
       <select
         onChange={(e) => {
           let comp = options.find((el) => el.value === e.target.value);

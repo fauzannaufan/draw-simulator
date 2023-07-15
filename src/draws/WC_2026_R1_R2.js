@@ -122,11 +122,7 @@ function WC_2026_R1_R2() {
   return (
     <>
       <div className="center">
-        <button onClick={drawAllTeams}>
-          {drawnTeams.length < pots.flat().length
-            ? 'Draw Round 1 Teams'
-            : 'Draw All Teams'}
-        </button>
+        <button onClick={drawAllTeams}>Automatic Draw</button>
         <button onClick={resetDraw}>Restart Draw</button>
         <input
           type="checkbox"
@@ -182,7 +178,7 @@ function WC_2026_R1_R2() {
 
           <Groups teams={teams} groups={groups} ref={groupRef} />
 
-          {pots.flat().length === drawnTeams.length &&
+          {/* {pots.flat().length === drawnTeams.length &&
             round2Pots.flat().length === drawnRound2Teams.length && (
               <>
                 <label
@@ -208,7 +204,7 @@ function WC_2026_R1_R2() {
                   Download JPEG
                 </label>
               </>
-            )}
+            )} */}
         </div>
       </div>
     </>

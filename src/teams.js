@@ -13,7 +13,7 @@ const teams = {
   },
   KOR: {
     country: 'KOR',
-    name: 'Korea Republic',
+    name: 'South Korea',
   },
   KSA: {
     country: 'KSA',
@@ -29,7 +29,7 @@ const teams = {
   },
   UAE: {
     country: 'UAE',
-    name: 'United Arab Emirates',
+    name: 'UAE',
   },
   OMA: {
     country: 'OMA',
@@ -65,7 +65,7 @@ const teams = {
   },
   KGZ: {
     country: 'KGZ',
-    name: 'Kyrgyz Republic',
+    name: 'Kyrgyzstan',
   },
   IND: {
     country: 'IND',
@@ -105,7 +105,7 @@ const teams = {
   },
   HKG: {
     country: 'HKG',
-    name: 'Hong Kong, China',
+    name: 'Hong Kong',
   },
   IDN: {
     country: 'IDN',
@@ -161,7 +161,7 @@ const teams = {
   },
   BRU: {
     country: 'BRU',
-    name: 'Brunei Darussalam',
+    name: 'Brunei',
   },
   BAN: {
     country: 'BAN',
