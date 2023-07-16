@@ -66,18 +66,22 @@ const teams = {
   WPO1: {
     country: 'KSA/UAE/JOR',
     name: 'Winner of PO 1',
+    short_name: 'WPO1',
   },
   WPO2: {
     country: 'IRN/UAE/BAN',
     name: 'Winner of PO 2',
+    short_name: 'WPO2',
   },
   WPO3: {
     country: 'QAT/UZB/OMA',
     name: 'Winner of PO 3',
+    short_name: 'WPO3',
   },
   WPO4: {
     country: 'QAT/UZB',
     name: 'Winner of PO 4',
+    short_name: 'WPO4',
   },
   KOR1: {
     country: 'KOR',
@@ -86,38 +90,47 @@ const teams = {
   KOR2: {
     country: 'KOR',
     name: 'Jeonbuk Hyundai Motors',
+    short_name: 'Jeonbuk',
   },
   KOR3: {
     country: 'KOR',
     name: 'Pohang Steelers',
+    short_name: 'Pohang',
   },
   JPN1: {
     country: 'JPN',
     name: 'Yokohama F Marinos',
+    short_name: 'Yokohama FM',
   },
   JPN2: {
     country: 'JPN',
     name: 'Ventforet Kofu',
+    short_name: 'Ventforet',
   },
   JPN3: {
     country: 'JPN',
     name: 'Kawasaki Frontale',
+    short_name: 'Frontale',
   },
   CHN1: {
     country: 'CHN',
     name: 'Wuhan Three Towns',
+    short_name: 'Wuhan',
   },
   CHN2: {
     country: 'CHN',
     name: 'Shandong Taishan',
+    short_name: 'Shandong',
   },
   THA1: {
     country: 'THA',
     name: 'Buriram United',
+    short_name: 'Buriram Utd',
   },
   THA2: {
     country: 'THA',
     name: 'Bangkok United',
+    short_name: 'Bangkok Utd',
   },
   HKG1: {
     country: 'HKG',
@@ -134,30 +147,37 @@ const teams = {
   MAS1: {
     country: 'MAS',
     name: "Johor Darul Ta'zim",
+    short_name: 'Johor DT',
   },
   AUS1: {
     country: 'AUS',
     name: 'Melbourne City',
+    short_name: 'Melbourne',
   },
   SGP1: {
     country: 'SGP',
     name: 'Lion City Sailors',
+    short_name: 'LC Sailors',
   },
   EPO1: {
     country: 'KOR/HKG/VIE',
     name: 'Winner of PO 1',
+    short_name: 'EPO1',
   },
   EPO2: {
     country: 'JPN/HKG/IDN',
     name: 'Winner of PO 2',
+    short_name: 'EPO2',
   },
   EPO3: {
     country: 'CHN/THA',
     name: 'Winner of PO 3',
+    short_name: 'EPO3',
   },
   EPO4: {
     country: 'CHN/THA',
     name: 'Winner of PO 4',
+    short_name: 'EPO4',
   },
 };
 

@@ -129,7 +129,6 @@ function ACL_2024_GS() {
             })
           ),
         ];
-        console.log(possibleProbs.length);
         indexGroupToFill = teamIndexGroups
           .map((group) => pot1teams.includes(group[0]))
           .indexOf(true);
@@ -175,11 +174,33 @@ function ACL_2024_GS() {
         Reveal Team
       </div>
       <div className="regions">
-        <h2>West Region</h2>
-        <h2>East Region</h2>
-        <Pots teams={teams} pots={wpots} drawnTeams={drawnWTeams} />
-        <Pots teams={teams} pots={epots} drawnTeams={drawnETeams} />
-        <div>
+        <h2
+          className={
+            wpots.flat().length !== drawnWTeams.length
+              ? 'round-ongoing'
+              : 'round-finished'
+          }
+        >
+          West Region
+        </h2>
+        <h2
+          className={
+            wpots.flat().length === drawnWTeams.length &&
+            epots.flat().length > drawnETeams.length
+              ? 'round-ongoing'
+              : 'round-finished'
+          }
+        >
+          East Region
+        </h2>
+        <div
+          className={
+            wpots.flat().length === drawnWTeams.length
+              ? 'round-finished'
+              : 'round-ongoing'
+          }
+        >
+          <Pots teams={teams} pots={wpots} drawnTeams={drawnWTeams} />
           {wpots.flat().length > drawnWTeams.length && (
             <Balls
               teams={teams}
@@ -191,7 +212,15 @@ function ACL_2024_GS() {
             />
           )}
         </div>
-        <div>
+        <div
+          className={
+            wpots.flat().length === drawnWTeams.length &&
+            epots.flat().length > drawnETeams.length
+              ? 'round-ongoing'
+              : 'round-finished'
+          }
+        >
+          <Pots teams={teams} pots={epots} drawnTeams={drawnETeams} />
           {wpots.flat().length === drawnWTeams.length &&
             epots.flat().length > drawnETeams.length && (
               <Balls
@@ -204,8 +233,22 @@ function ACL_2024_GS() {
               />
             )}
         </div>
-        <Groups teams={teams} groups={wgroups} firstGroupLetter="A" />
-        <Groups teams={teams} groups={egroups} firstGroupLetter="F" />
+        <Groups
+          className="desktop"
+          teams={teams}
+          groups={wgroups}
+          firstGroupLetter="A"
+        />
+        <Groups
+          className="desktop"
+          teams={teams}
+          groups={egroups}
+          firstGroupLetter="F"
+        />
+        <div className="mobile">
+          {epots.flat().length === drawnETeams.length && <h2>Draw Results</h2>}
+          <Groups teams={teams} groups={[...wgroups, ...egroups]} />
+        </div>
       </div>
     </div>
   );

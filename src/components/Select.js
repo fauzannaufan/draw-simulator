@@ -11,14 +11,6 @@ const options = [
             id: 'WC_2026_R1_R2',
             name: 'Round 1 & 2',
           },
-          {
-            id: 'WC_2026_R3',
-            name: 'Round 3',
-          },
-          {
-            id: 'WC_2026_R4',
-            name: 'Round 4',
-          },
         ],
       },
     ],
@@ -33,10 +25,6 @@ const options = [
             id: 'ACL_2024_GS',
             name: 'Group Stage',
           },
-          {
-            id: 'ACL_202324_KO',
-            name: 'Knockout Stage',
-          },
         ],
       },
     ],
@@ -50,10 +38,6 @@ const options = [
           {
             id: 'ACC_202324_GS',
             name: 'Group Stage',
-          },
-          {
-            id: 'ACC_202324_KO',
-            name: 'Knockout Stage',
           },
         ],
       },
