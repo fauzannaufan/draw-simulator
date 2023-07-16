@@ -15,7 +15,7 @@ function Pots({ teams, pots, drawnTeams }) {
                 key={'team' + indexteam}
               >
                 <td>
-                  {team.split('/').map((el) => (
+                  {teams[team].country.split('/').map((el) => (
                     <img
                       key={el}
                       src={`https://api.fifa.com/api/v3/picture/flags-sq-2/${el.substring(

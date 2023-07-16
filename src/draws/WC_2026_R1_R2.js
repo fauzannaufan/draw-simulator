@@ -166,7 +166,7 @@ function WC_2026_R1_R2() {
           {pots.flat().length === drawnTeams.length &&
             round2Pots.flat().length > drawnRound2Teams.length && (
               <Balls
-                type="straight"
+                type="straight-startbottom"
                 drawnTeams={drawnRound2Teams}
                 pots={round2Pots}
                 chooseTeam={chooseTeamGroup}

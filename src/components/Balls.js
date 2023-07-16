@@ -8,13 +8,18 @@ const shuffleArray = (array) => {
   return array;
 };
 
-function Balls({ pots, drawnTeams, chooseTeam, type, revealTeams }) {
-  const potToDisplay =
-    type === 'alternating'
-      ? drawnTeams.length % pots.length
-      : Math.floor(
-          (pots.flat().length - drawnTeams.length - 1) / pots[0].length
-        );
+function Balls({ teams, pots, drawnTeams, chooseTeam, type, revealTeams }) {
+  let potToDisplay = 0;
+  if (type === 'alternating') {
+    potToDisplay = drawnTeams.length % pots.length;
+  } else if (type === 'straight-starttop') {
+    potToDisplay = Math.floor(drawnTeams.length / pots[0].length);
+  } else if (type === 'straight-startbottom') {
+    potToDisplay = Math.floor(
+      (pots.flat().length - drawnTeams.length - 1) / pots[0].length
+    );
+  }
+
   const ballClass = ['ball-red', 'ball-green', 'ball-blue', 'ball-yellow'];
 
   return (

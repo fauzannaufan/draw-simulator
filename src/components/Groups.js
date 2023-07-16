@@ -17,10 +17,13 @@ const Groups = forwardRef(({ groups, teams, firstGroupLetter = 'A' }, ref) => {
             {group.map((team, indexteam) => (
               <tr key={'team' + indexteam}>
                 <td>
-                  {team.split('/').map((el) => (
+                  {teams[team]?.country.split('/').map((el) => (
                     <img
                       key={el}
-                      src={`https://api.fifa.com/api/v3/picture/flags-sq-2/${el}`}
+                      src={`https://api.fifa.com/api/v3/picture/flags-sq-2/${el.substring(
+                        0,
+                        3
+                      )}`}
                       width="16"
                       alt={el}
                     />

@@ -63,19 +63,19 @@ const teams = {
     country: 'IND',
     name: 'Mumbai City',
   },
-  'KSA/UAE/JOR': {
+  WPO1: {
     country: 'KSA/UAE/JOR',
     name: 'Winner of PO 1',
   },
-  'IRN/UAE/BAN': {
+  WPO2: {
     country: 'IRN/UAE/BAN',
     name: 'Winner of PO 2',
   },
-  'QAT/UZB/OMA': {
+  WPO3: {
     country: 'QAT/UZB/OMA',
     name: 'Winner of PO 3',
   },
-  'QAT/UZB': {
+  WPO4: {
     country: 'QAT/UZB',
     name: 'Winner of PO 4',
   },
@@ -89,7 +89,7 @@ const teams = {
   },
   KOR3: {
     country: 'KOR',
-    name: 'Pohang Stelers',
+    name: 'Pohang Steelers',
   },
   JPN1: {
     country: 'JPN',
@@ -143,19 +143,19 @@ const teams = {
     country: 'SGP',
     name: 'Lion City Sailors',
   },
-  'KOR/HKG/VIE': {
+  EPO1: {
     country: 'KOR/HKG/VIE',
     name: 'Winner of PO 1',
   },
-  'JPN/HKG/IDN': {
+  EPO2: {
     country: 'JPN/HKG/IDN',
     name: 'Winner of PO 2',
   },
-  'CHN3/THA': {
+  EPO3: {
     country: 'CHN/THA',
     name: 'Winner of PO 3',
   },
-  'CHN4/THA': {
+  EPO4: {
     country: 'CHN/THA',
     name: 'Winner of PO 4',
   },
