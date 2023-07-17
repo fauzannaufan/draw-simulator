@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import Groups from '../components/Groups';
 import teams from './acl_2024_teams';
 
-import './acl_2024.css';
+import './acl_2024.scss';
 import Pots from '../components/Pots';
 import Balls from '../components/Balls';
 import west_probs from '../combinations/acl_2024_gs_west.json';
@@ -163,7 +163,7 @@ function ACL_2024_GS() {
   };
 
   return (
-    <div>
+    <div className="acl">
       <div className="center">
         <button onClick={drawAllTeams}>Automatic Draw</button>
         <button onClick={resetDraw}>Restart Draw</button>

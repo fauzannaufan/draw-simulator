@@ -6,7 +6,7 @@ import Results from '../components/Results';
 import Balls from '../components/Balls';
 import Groups from '../components/Groups';
 
-import './wc_2026.css';
+import './wc_2026.scss';
 
 const pots = [
   ['IDN', 'TPE', 'MDV', 'YEM', 'AFG', 'SGP', 'MYA', 'NEP', 'CAM'],
@@ -118,7 +118,7 @@ function WC_2026_R1_R2() {
   };
 
   return (
-    <>
+    <div className="wcq">
       <div className="center">
         <button onClick={drawAllTeams}>Automatic Draw</button>
         <button onClick={resetDraw}>Restart Draw</button>
@@ -177,7 +177,7 @@ function WC_2026_R1_R2() {
           <Groups teams={teams} groups={groups} ref={groupRef} />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

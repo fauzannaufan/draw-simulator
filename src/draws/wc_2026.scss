@@ -1,0 +1,13 @@
+.wcq {
+  .group-table {
+    max-width: 170px;
+  }
+
+  @media only screen and (min-width: 992px) {
+    .rounds {
+      display: grid;
+      grid-template-columns: 3fr 7fr;
+      gap: 16px;
+    }
+  }
+}
