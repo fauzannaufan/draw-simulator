@@ -36,7 +36,7 @@ const options = [
         season: '2023-24',
         stages: [
           {
-            id: 'ACC_202324_GS',
+            id: 'ACC_2024_GS',
             name: 'Group Stage',
           },
         ],

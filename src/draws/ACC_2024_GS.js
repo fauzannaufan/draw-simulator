@@ -1,12 +1,12 @@
 import { useMemo, useState } from 'react';
 import Groups from '../components/Groups';
-import teams from './acl_2024_teams';
+import teams from './acc_2024_teams';
 
-import './acl_2024.scss';
+import './acc_2024.scss';
 import Pots from '../components/Pots';
 import Balls from '../components/Balls';
-import west_probs from '../combinations/acl_2024_gs_west.json';
-import east_probs from '../combinations/acl_2024_gs_east.json';
+import west_probs from '../combinations/acc_2024_gs_west.json';
+import asean_probs from '../combinations/acc_2024_gs_asean.json';
 
 const clone = (arr) => {
   return JSON.parse(JSON.stringify(arr));
@@ -16,22 +16,20 @@ const original_groups = [
   ['', '', '', ''],
   ['', '', '', ''],
   ['', '', '', ''],
-  ['', '', '', ''],
-  ['', '', '', ''],
 ];
 
 const wpots = [
-  ['KSA1', 'IRN1', 'QAT1', 'UZB1', 'KSA2'],
-  ['IRN2', 'QAT2', 'UZB2', 'KSA3', 'IRN3'],
-  ['JOR1', 'TJK1', 'IRQ1', 'TKM1', 'IND1'],
-  ['UAE1', 'WPO1', 'WPO2', 'WPO3', 'WPO4'],
+  ['JOR1', 'IRQ1', 'LBN1'],
+  ['KUW1', 'BHR1', 'SYR1'],
+  ['PLE1', 'IRQ2', 'LBN2'],
+  ['KUW2', 'WPO1', 'WPO2'],
 ];
 
-const epots = [
-  ['KOR1', 'JPN1', 'CHN1', 'THA1', 'KOR2'],
-  ['JPN2', 'CHN2', 'THA2', 'KOR3', 'JPN3'],
-  ['VIE1', 'PHI1', 'MAS1', 'AUS1', 'SGP1'],
-  ['HKG1', 'EPO1', 'EPO2', 'EPO3', 'EPO4'],
+const apots = [
+  ['VIE1', 'PHI1', 'MAS1'],
+  ['AUS1', 'SGP1', 'IDN1'],
+  ['MYA1', 'PHI2', 'MAS2'],
+  ['AUS2', 'APO1', 'APO2'],
 ];
 
 const findPossibleProbs = (probs, groups) => {
@@ -53,24 +51,29 @@ const findPossibleProbs = (probs, groups) => {
   });
 };
 
-function ACL_2024_GS() {
+function ACC_2024_GS() {
   const [wgroups, setWGroups] = useState(clone(original_groups));
-  const [egroups, setEGroups] = useState(clone(original_groups));
+  const [agroups, setAGroups] = useState(clone(original_groups));
+  const [othergroups] = useState([
+    ['IND1', 'BAN1', 'MDV1', 'SPO1'],
+    ['TJK1', 'TKM1', 'KGZ1', 'CPO1'],
+    ['MAC1', 'TPE1', 'MNG1', 'EPO1'],
+  ]);
   const [revealTeams, setRevealTeams] = useState(false);
 
   const drawnWTeams = useMemo(() => {
     return [...wgroups.flat().filter((el) => el)];
   }, [wgroups]);
 
-  const drawnETeams = useMemo(() => {
-    return [...egroups.flat().filter((el) => el)];
-  }, [egroups]);
+  const drawnATeams = useMemo(() => {
+    return [...agroups.flat().filter((el) => el)];
+  }, [agroups]);
 
   const drawAllTeams = () => {
     if (wpots.flat().length > drawnWTeams.length) {
       autoDraw(wgroups, drawnWTeams, wpots, west_probs, setWGroups);
-    } else if (epots.flat().length > drawnETeams.length) {
-      autoDraw(egroups, drawnETeams, epots, east_probs, setEGroups);
+    } else if (apots.flat().length > drawnATeams.length) {
+      autoDraw(agroups, drawnATeams, apots, asean_probs, setAGroups);
     }
   };
 
@@ -145,8 +148,8 @@ function ACL_2024_GS() {
     chooseTeam(team, wpots, west_probs, setWGroups);
   };
 
-  const chooseTeamEast = (team) => {
-    chooseTeam(team, epots, east_probs, setEGroups);
+  const chooseTeamAsean = (team) => {
+    chooseTeam(team, apots, asean_probs, setAGroups);
   };
 
   const resetDraw = () => {
@@ -155,7 +158,7 @@ function ACL_2024_GS() {
         return group.map((item) => '');
       });
     });
-    setEGroups((old) => {
+    setAGroups((old) => {
       return old.map((group) => {
         return group.map((item) => '');
       });
@@ -163,7 +166,7 @@ function ACL_2024_GS() {
   };
 
   return (
-    <div className="acl">
+    <div className="acc">
       <div className="center">
         <button onClick={drawAllTeams}>Automatic Draw</button>
         <button onClick={resetDraw}>Restart Draw</button>
@@ -173,7 +176,7 @@ function ACL_2024_GS() {
         />{' '}
         Reveal Team
       </div>
-      <div className="regions">
+      <div className="zones">
         <h2
           className={
             wpots.flat().length !== drawnWTeams.length
@@ -181,17 +184,17 @@ function ACL_2024_GS() {
               : 'round-finished'
           }
         >
-          West Region
+          West Zone
         </h2>
         <h2
           className={
             wpots.flat().length === drawnWTeams.length &&
-            epots.flat().length > drawnETeams.length
+            apots.flat().length > drawnATeams.length
               ? 'round-ongoing'
               : 'round-finished'
           }
         >
-          East Region
+          ASEAN Zone
         </h2>
         <div
           className={
@@ -215,43 +218,53 @@ function ACL_2024_GS() {
         <div
           className={
             wpots.flat().length === drawnWTeams.length &&
-            epots.flat().length > drawnETeams.length
+            apots.flat().length > drawnATeams.length
               ? 'round-ongoing'
               : 'round-finished'
           }
         >
-          <Pots teams={teams} pots={epots} drawnTeams={drawnETeams} />
+          <Pots teams={teams} pots={apots} drawnTeams={drawnATeams} />
           {wpots.flat().length === drawnWTeams.length &&
-            epots.flat().length > drawnETeams.length && (
+            apots.flat().length > drawnATeams.length && (
               <Balls
                 teams={teams}
                 type="straight-starttop"
-                drawnTeams={drawnETeams}
-                pots={epots}
-                chooseTeam={chooseTeamEast}
+                drawnTeams={drawnATeams}
+                pots={apots}
+                chooseTeam={chooseTeamAsean}
                 revealTeams={revealTeams}
               />
             )}
         </div>
+        <div className="mobile">
+          {apots.flat().length === drawnATeams.length && <h2>Draw Results</h2>}
+          <Groups
+            teams={teams}
+            groups={[
+              ...wgroups,
+              othergroups[0],
+              othergroups[1],
+              ...agroups,
+              othergroups[2],
+            ]}
+          />
+        </div>
+      </div>
+      <div className="groups desktop">
+        {apots.flat().length === drawnATeams.length && <h2>Draw Results</h2>}
         <Groups
-          className="desktop"
           teams={teams}
-          groups={wgroups}
+          groups={[...wgroups, othergroups[0], othergroups[1]]}
           firstGroupLetter="A"
         />
         <Groups
-          className="desktop"
           teams={teams}
-          groups={egroups}
+          groups={[...agroups, othergroups[2]]}
           firstGroupLetter="F"
         />
-        <div className="mobile">
-          {epots.flat().length === drawnETeams.length && <h2>Draw Results</h2>}
-          <Groups teams={teams} groups={[...wgroups, ...egroups]} />
-        </div>
       </div>
     </div>
   );
 }
 
-export default ACL_2024_GS;
+export default ACC_2024_GS;

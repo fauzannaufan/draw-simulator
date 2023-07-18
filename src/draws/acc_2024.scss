@@ -1,0 +1,31 @@
+.acc {
+  .pot-table {
+    max-width: 165px;
+  }
+
+  .group-table {
+    max-width: 200px;
+  }
+
+  .zones {
+    text-align: center;
+  }
+
+  @media only screen and (min-width: 992px) {
+    .zones {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .groups {
+      text-align: center;
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    .group-table {
+      width: calc(33.33% - 4px);
+    }
+  }
+}
