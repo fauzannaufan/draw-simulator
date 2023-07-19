@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ReactGA from 'react-ga4';
 import './App.css';
 
 import WC_2026_R1_R2 from './draws/WC_2026_R1_R2';
@@ -8,6 +9,8 @@ import ACC_2024_GS from './draws/ACC_2024_GS';
 
 function App() {
   const [selectedDraw, setSelectedDraw] = useState('WC_2026_R1_R2');
+
+  ReactGA.initialize('G-XS6MVXWCJ1');
 
   return (
     <main>
