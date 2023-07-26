@@ -10,13 +10,13 @@ import './wc_2026.scss';
 
 const pots = [
   ['IDN', 'TPE', 'MDV', 'YEM', 'AFG', 'SGP', 'MYA', 'NEP', 'CAM'],
-  ['MAC', 'MNG', 'BHU', 'LAO', 'BRU', 'BAN', 'TLS', 'PAK', 'GUM'],
+  ['MAC', 'MNG', 'BHU', 'LAO', 'BAN', 'BRU', 'TLS', 'PAK', 'GUM'],
 ];
 
 const original_round2Pots = [
   ['JPN', 'IRN', 'AUS', 'KOR', 'KSA', 'QAT', 'IRQ', 'UAE', 'OMA'],
   ['UZB', 'CHN', 'JOR', 'BHR', 'SYR', 'VIE', 'PLE', 'KGZ', 'IND'],
-  ['LBN', 'TJK', 'THA', 'PRK', 'PHI', 'MAS', 'TKM', 'KUW', 'HKG'],
+  ['LBN', 'TJK', 'THA', 'PRK', 'PHI', 'MAS', 'KUW', 'TKM', 'HKG'],
   [],
 ];
 
