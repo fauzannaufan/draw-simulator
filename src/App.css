@@ -58,8 +58,8 @@ body {
 }
 
 .ball {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
@@ -132,13 +132,18 @@ main {
   text-align: center;
 }
 
+.rounds h2 {
+  margin: 4px 0;
+}
+
 .div-select {
   display: inline-block;
-  margin-bottom: 16px;
+  margin-bottom: 4px;
 }
 
 .div-select > h2 {
   display: inline-block;
+  margin-bottom: 0;
 }
 
 .download {

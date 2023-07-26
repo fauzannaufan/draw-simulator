@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import teams from '../teams';
 
 import Pots from '../components/Pots';
@@ -9,14 +9,14 @@ import Groups from '../components/Groups';
 import './wc_2026.scss';
 
 const pots = [
-  ['IDN', 'TPE', 'MDV', 'YEM', 'AFG', 'SGP', 'MYA', 'NEP', 'CAM'],
-  ['MAC', 'MNG', 'BHU', 'LAO', 'BAN', 'BRU', 'TLS', 'PAK', 'GUM'],
+  ['HKG', 'IDN', 'TPE', 'MDV', 'YEM', 'AFG', 'SGP', 'MYA', 'NEP', 'CAM'],
+  ['MAC', 'MNG', 'BHU', 'LAO', 'BAN', 'BRU', 'TLS', 'PAK', 'GUM', 'SRI'],
 ];
 
 const original_round2Pots = [
   ['JPN', 'IRN', 'AUS', 'KOR', 'KSA', 'QAT', 'IRQ', 'UAE', 'OMA'],
   ['UZB', 'CHN', 'JOR', 'BHR', 'SYR', 'VIE', 'PLE', 'KGZ', 'IND'],
-  ['LBN', 'TJK', 'THA', 'PRK', 'PHI', 'MAS', 'KUW', 'TKM', 'HKG'],
+  ['LBN', 'TJK', 'THA', 'PRK', 'PHI', 'MAS', 'KUW', 'TKM'],
   [],
 ];
 
@@ -32,10 +32,25 @@ const original_groups = [
   ['', '', '', ''],
 ];
 
+const clone = (arr) => {
+  return JSON.parse(JSON.stringify(arr));
+};
+
 function WC_2026_R1_R2() {
-  const [results, setResults] = useState([[], [], [], [], [], [], [], [], []]);
-  const [groups, setGroups] = useState(original_groups);
-  const [round2Pots, setRound2Pots] = useState(original_round2Pots);
+  const [results, setResults] = useState([
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+  ]);
+  const [groups, setGroups] = useState(clone(original_groups));
+  const [round2Pots, setRound2Pots] = useState(clone(original_round2Pots));
   const [revealTeams, setRevealTeams] = useState(false);
 
   const groupRef = useRef();
@@ -48,6 +63,23 @@ function WC_2026_R1_R2() {
   const drawnRound2Teams = useMemo(() => {
     return groups.flat().filter((el) => el);
   }, [groups]);
+
+  useEffect(() => {
+    if (drawnRound2Teams.length === groups.length) {
+      const remainingTeamIndex = round2Pots[3].findIndex(
+        (team) => !drawnRound2Teams.includes(team)
+      );
+      const remainingTeam = round2Pots[3][remainingTeamIndex];
+      if (remainingTeam) {
+        setRound2Pots((old) => {
+          const newPots = clone(old);
+          newPots[3].splice(remainingTeamIndex, 1);
+          newPots[2].push(remainingTeam);
+          return newPots;
+        });
+      }
+    }
+  }, [drawnRound2Teams]);
 
   const chooseTeam = (team) => {
     setResults((oldResults) => {
@@ -84,8 +116,8 @@ function WC_2026_R1_R2() {
   };
 
   const resetDraw = () => {
-    setResults([[], [], [], [], [], [], [], [], []]);
-    setRound2Pots(original_round2Pots);
+    setResults([[], [], [], [], [], [], [], [], [], []]);
+    setRound2Pots(clone(original_round2Pots));
     setGroups((old) => {
       return old.map((group) => {
         return group.map((item) => '');
@@ -106,14 +138,29 @@ function WC_2026_R1_R2() {
       }
     } else if (drawnRound2Teams.length < round2Pots.flat().length) {
       const teamsDrawn = [...drawnRound2Teams];
-      for (let i = teamsDrawn.length; i < round2Pots.flat().length; i++) {
-        const currentPot = round2Pots[
-          Math.floor((round2Pots.flat().length - i - 1) / round2Pots[0].length)
+      const current_pots = [...round2Pots];
+      for (let i = teamsDrawn.length; i < current_pots.flat().length; i++) {
+        if (i === groups.length) {
+          const remainingTeamIndex = current_pots[3].findIndex(
+            (team) => !teamsDrawn.includes(team)
+          );
+          const remainingTeam = current_pots[3][remainingTeamIndex];
+          if (remainingTeam) {
+            current_pots[3].splice(remainingTeamIndex, 1);
+            current_pots[2].push(remainingTeam);
+          }
+        }
+        const currentPot = current_pots[
+          Math.floor(
+            (current_pots.flat().length - i - 1) / current_pots[0].length
+          )
         ].filter((el) => !teamsDrawn.includes(el));
         const randomTeamIndex = Math.floor(Math.random() * currentPot.length);
         chooseTeamGroup(currentPot[randomTeamIndex]);
         teamsDrawn.push(currentPot[randomTeamIndex]);
       }
+
+      setRound2Pots(current_pots);
     }
   };
 
