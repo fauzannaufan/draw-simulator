@@ -2,20 +2,6 @@ import { useState } from 'react';
 
 const options = [
   {
-    value: 'World Cup Qual',
-    seasons: [
-      {
-        season: '2026',
-        stages: [
-          {
-            id: 'WC_2026_R1_R2',
-            name: 'Round 1 & 2',
-          },
-        ],
-      },
-    ],
-  },
-  {
     value: 'ACL',
     seasons: [
       {
@@ -38,6 +24,20 @@ const options = [
           {
             id: 'ACC_2024_GS',
             name: 'Group Stage',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    value: 'World Cup Qual',
+    seasons: [
+      {
+        season: '2026',
+        stages: [
+          {
+            id: 'WC_2026_R1_R2',
+            name: 'Round 1 & 2',
           },
         ],
       },

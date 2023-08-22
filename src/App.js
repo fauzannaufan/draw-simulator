@@ -8,7 +8,7 @@ import ACL_2024_GS from './draws/ACL_2024_GS';
 import ACC_2024_GS from './draws/ACC_2024_GS';
 
 function App() {
-  const [selectedDraw, setSelectedDraw] = useState('WC_2026_R1_R2');
+  const [selectedDraw, setSelectedDraw] = useState('ACL_2024_GS');
 
   ReactGA.initialize('G-XS6MVXWCJ1');
 

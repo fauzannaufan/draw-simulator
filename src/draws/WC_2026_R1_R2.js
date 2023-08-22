@@ -32,6 +32,19 @@ const original_groups = [
   ['', '', '', ''],
 ];
 
+const real_round1 = [
+  ['AFG', 'MNG'],
+  ['MDV', 'BAN'],
+  ['SGP', 'GUM'],
+  ['YEM', 'SRI'],
+  ['MYA', 'MAC'],
+  ['CAM', 'PAK'],
+  ['TPE', 'TLS'],
+  ['IDN', 'BRU'],
+  ['HKG', 'BHU'],
+  ['NEP', 'LAO'],
+];
+
 const clone = (arr) => {
   return JSON.parse(JSON.stringify(arr));
 };
@@ -126,7 +139,12 @@ function WC_2026_R1_R2() {
   };
 
   const drawAllTeams = () => {
-    if (drawnTeams.length < pots.flat().length) {
+    if (drawnTeams.length === 0) {
+      real_round1.forEach((pairings) => {
+        chooseTeam(pairings[0]);
+        chooseTeam(pairings[1]);
+      });
+    } else if (drawnTeams.length < pots.flat().length) {
       const teamsDrawn = [...drawnTeams];
       for (let i = teamsDrawn.length + 1; i <= pots.flat().length; i++) {
         const currentPot = pots[(i + 1) % pots.length].filter(

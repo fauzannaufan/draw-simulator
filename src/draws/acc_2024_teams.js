@@ -1,16 +1,15 @@
 const teams = {
   JOR1: {
     country: 'JOR',
-    name: 'Al Wehdat/Al Hussein',
-    short_name: 'Al Wehdat',
+    name: 'Al Wehdat',
   },
   IRQ1: {
     country: 'IRQ',
-    name: 'IRQ2',
+    name: 'Al Zawraa',
   },
   IRQ2: {
     country: 'IRQ',
-    name: 'IRQ3',
+    name: 'Al Kahrabaa',
   },
   LBN1: {
     country: 'LBN',
@@ -66,8 +65,9 @@ const teams = {
     short_name: 'Maziya',
   },
   SPO1: {
-    country: '',
+    country: 'IND/BAN',
     name: 'Winner of PO',
+    short_name: 'SPO1',
   },
   TJK1: {
     country: 'TJK',
@@ -82,14 +82,13 @@ const teams = {
     name: 'Abdysh Ata',
   },
   CPO1: {
-    country: 'TJK/TKM/KGZ',
-    name: 'Winner of PO',
+    country: 'TKM',
+    name: 'Merw',
     short_name: 'CPO1',
   },
   VIE1: {
     country: 'VIE',
-    name: 'Haiphong/HAGL',
-    short_name: 'Haiphong',
+    name: 'Haiphong',
   },
   PHI1: {
     country: 'PHI',
@@ -125,20 +124,19 @@ const teams = {
   },
   IDN1: {
     country: 'IDN',
-    name: 'Bali United/Persija',
-    short_name: 'Bali United',
+    name: 'Bali United',
   },
   MYA1: {
     country: 'MYA',
     name: 'Shan United',
   },
   APO1: {
-    country: 'SGP/CAM/LAO',
+    country: 'SGP/CAM',
     name: 'Winner of PO1',
     short_name: 'APO1',
   },
   APO2: {
-    country: 'IDN/MYA/BRU',
+    country: 'IDN/MYA',
     name: 'Winner of PO2',
     short_name: 'APO2',
   },

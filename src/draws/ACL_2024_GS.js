@@ -31,7 +31,7 @@ const epots = [
   ['KOR1', 'JPN1', 'CHN1', 'THA1', 'KOR2'],
   ['JPN2', 'CHN2', 'THA2', 'KOR3', 'JPN3'],
   ['VIE1', 'PHI1', 'MAS1', 'AUS1', 'SGP1'],
-  ['HKG1', 'EPO1', 'EPO2', 'EPO3', 'EPO4'],
+  ['HKG1', 'KOR4', 'JPN4', 'CHN3', 'THA3'],
 ];
 
 const findPossibleProbs = (probs, groups) => {

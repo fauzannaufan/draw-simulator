@@ -53,7 +53,8 @@ const teams = {
   },
   IRQ1: {
     country: 'IRQ',
-    name: 'IRQ1',
+    name: 'Al Quwa Al Jawiya',
+    short_name: 'Quwa Jawiya',
   },
   TKM1: {
     country: 'TKM',
@@ -64,17 +65,17 @@ const teams = {
     name: 'Mumbai City',
   },
   WPO1: {
-    country: 'KSA/UAE/JOR',
+    country: 'KSA/UAE',
     name: 'Winner of PO 1',
     short_name: 'WPO1',
   },
   WPO2: {
-    country: 'IRN/UAE/BAN',
+    country: 'IRN/UAE',
     name: 'Winner of PO 2',
     short_name: 'WPO2',
   },
   WPO3: {
-    country: 'QAT/UZB/OMA',
+    country: 'QAT/UZB',
     name: 'Winner of PO 3',
     short_name: 'WPO3',
   },
@@ -159,25 +160,23 @@ const teams = {
     name: 'Lion City Sailors',
     short_name: 'LC Sailors',
   },
-  EPO1: {
-    country: 'KOR/HKG/VIE',
-    name: 'Winner of PO 1',
-    short_name: 'EPO1',
+  KOR4: {
+    country: 'KOR',
+    name: 'Incheon United',
   },
-  EPO2: {
-    country: 'JPN/HKG/IDN',
-    name: 'Winner of PO 2',
-    short_name: 'EPO2',
+  JPN4: {
+    country: 'JPN',
+    name: 'Urawa Red Diamonds',
+    short_name: 'Urawa',
   },
-  EPO3: {
-    country: 'CHN/THA',
-    name: 'Winner of PO 3',
-    short_name: 'EPO3',
+  CHN3: {
+    country: 'CHN',
+    name: 'Zhejiang',
   },
-  EPO4: {
-    country: 'CHN/THA',
-    name: 'Winner of PO 4',
-    short_name: 'EPO4',
+  THA3: {
+    country: 'THA',
+    name: 'BG Pathum United',
+    short_name: 'BG Pathum',
   },
 };
 
