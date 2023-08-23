@@ -128,15 +128,13 @@ const teams = {
     country: 'MYA',
     name: 'Shan United',
   },
-  APO1: {
-    country: 'SGP/CAM',
-    name: 'Winner of PO1',
-    short_name: 'APO1',
+  CAM1: {
+    country: 'CAM',
+    name: 'Phnom Penh Crown',
   },
-  APO2: {
-    country: 'IDN/MYA',
-    name: 'Winner of PO2',
-    short_name: 'APO2',
+  IDN2: {
+    country: 'IDN',
+    name: 'PSM Makassar',
   },
   MAC1: {
     country: 'MAC',
@@ -151,9 +149,8 @@ const teams = {
     name: 'Ulaanbaatar',
   },
   EPO1: {
-    country: 'MAC/TPE',
-    name: 'Winner of PO',
-    short_name: 'EPO1',
+    country: 'TPE',
+    name: 'Taichung Futuro',
   },
 };
 

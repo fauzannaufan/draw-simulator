@@ -43,6 +43,20 @@ const options = [
       },
     ],
   },
+  {
+    value: 'U17 World Cup',
+    seasons: [
+      {
+        season: '2023',
+        stages: [
+          {
+            id: 'WC17_2023',
+            name: 'Final Draw',
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 function Select({ setSelectedDraw }) {

@@ -2,15 +2,15 @@ let pots = [
   ['VIE1', 'PHI1', 'MAS1'],
   ['AUS1', 'SGP1', 'IDN1'],
   ['MYA1', 'PHI2', 'MAS2'],
-  ['AUS2', 'SGP/CAM', 'IDN/MYA'],
+  ['AUS2', 'CAM1', 'IDN2'],
 ];
 
-pots = [
-  ['JOR1', 'IRQ1', 'LBN1'],
-  ['KUW1', 'BHR1', 'SYR1'],
-  ['PLE1', 'IRQ2', 'LBN2'],
-  ['KUW2', 'OMA1', 'SYR2'],
-];
+// pots = [
+//   ['JOR1', 'IRQ1', 'LBN1'],
+//   ['KUW1', 'BHR1', 'SYR1'],
+//   ['PLE1', 'IRQ2', 'LBN2'],
+//   ['KUW2', 'OMA1', 'SYR2'],
+// ];
 
 // pots = [
 //   ['KSA1', 'IRN1', 'QAT1', 'UZB1', 'KSA2'],

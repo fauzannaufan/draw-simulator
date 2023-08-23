@@ -29,7 +29,7 @@ const apots = [
   ['VIE1', 'PHI1', 'MAS1'],
   ['AUS1', 'SGP1', 'IDN1'],
   ['MYA1', 'PHI2', 'MAS2'],
-  ['AUS2', 'APO1', 'APO2'],
+  ['AUS2', 'CAM1', 'IDN2'],
 ];
 
 const findPossibleProbs = (probs, groups) => {
