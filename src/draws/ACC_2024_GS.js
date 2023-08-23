@@ -22,7 +22,7 @@ const wpots = [
   ['JOR1', 'IRQ1', 'LBN1'],
   ['KUW1', 'BHR1', 'SYR1'],
   ['PLE1', 'IRQ2', 'LBN2'],
-  ['KUW2', 'WPO1', 'WPO2'],
+  ['KUW2', 'OMA1', 'SYR2'],
 ];
 
 const apots = [

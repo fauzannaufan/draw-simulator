@@ -64,25 +64,21 @@ const teams = {
     country: 'IND',
     name: 'Mumbai City',
   },
-  WPO1: {
-    country: 'KSA/UAE',
-    name: 'Winner of PO 1',
-    short_name: 'WPO1',
+  KSA4: {
+    country: 'KSA',
+    name: 'Al Nassr',
   },
-  WPO2: {
-    country: 'IRN/UAE',
-    name: 'Winner of PO 2',
-    short_name: 'WPO2',
+  UAE2: {
+    country: 'UAE',
+    name: 'Sharjah',
   },
-  WPO3: {
-    country: 'QAT/UZB',
-    name: 'Winner of PO 3',
-    short_name: 'WPO3',
+  UZB3: {
+    country: 'UZB',
+    name: 'Navbahor',
   },
-  WPO4: {
-    country: 'QAT/UZB',
-    name: 'Winner of PO 4',
-    short_name: 'WPO4',
+  UZB4: {
+    country: 'UZB',
+    name: 'AGMK',
   },
   KOR1: {
     country: 'KOR',

@@ -40,15 +40,14 @@ const teams = {
     name: 'Jabal Al Mukaber',
     short_name: 'Jabal Mukaber',
   },
-  WPO1: {
-    country: 'BHR/OMA',
-    name: 'Winner of PO1',
-    short_name: 'WPO1',
+  OMA1: {
+    country: 'OMA',
+    name: 'Al Nahda',
   },
-  WPO2: {
-    country: 'SYR/PLE',
-    name: 'Winner of PO2',
-    short_name: 'WPO2',
+  SYR2: {
+    country: 'SYR',
+    name: 'Al Ittihad Al Ahli',
+    short_name: 'Al Ittihad Ahli',
   },
   IND1: {
     country: 'IND',
@@ -65,9 +64,8 @@ const teams = {
     short_name: 'Maziya',
   },
   SPO1: {
-    country: 'IND/BAN',
-    name: 'Winner of PO',
-    short_name: 'SPO1',
+    country: 'IND',
+    name: 'Mohun Bagan',
   },
   TJK1: {
     country: 'TJK',
