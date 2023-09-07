@@ -9,7 +9,7 @@ import ACC_2024_GS from './draws/ACC_2024_GS';
 import WC17_2023 from './draws/WC17_2023';
 
 function App() {
-  const [selectedDraw, setSelectedDraw] = useState('ACL_2024_GS');
+  const [selectedDraw, setSelectedDraw] = useState('WC17_2023');
 
   ReactGA.initialize('G-XS6MVXWCJ1');
 
@@ -22,9 +22,9 @@ function App() {
         <ACL_2024_GS />
       ) : selectedDraw === 'ACC_2024_GS' ? (
         <ACC_2024_GS />
+      ) : selectedDraw === 'WC17_2023' ? (
+        <WC17_2023 />
       ) : (
-        // ) : selectedDraw === 'WC17_2023' ? (
-        //   <WC17_2023 />
         <h1>Coming Soon</h1>
       )}
     </main>

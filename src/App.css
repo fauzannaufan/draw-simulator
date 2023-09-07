@@ -17,6 +17,10 @@ body {
   padding: 4px;
 }
 
+.group-table.selected th {
+  background-color: gold;
+}
+
 .pot-table,
 .pot-table tr,
 .pot-table th,
@@ -31,6 +35,10 @@ body {
 
 .pot-table .drawn {
   opacity: 0.3;
+}
+
+.pot-table .selected {
+  background-color: gold;
 }
 
 .results-2legs {

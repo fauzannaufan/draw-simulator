@@ -2,6 +2,20 @@ import { useState } from 'react';
 
 const options = [
   {
+    value: 'U17 World Cup',
+    seasons: [
+      {
+        season: '2023',
+        stages: [
+          {
+            id: 'WC17_2023',
+            name: 'Final Draw',
+          },
+        ],
+      },
+    ],
+  },
+  {
     value: 'ACL',
     seasons: [
       {
@@ -38,20 +52,6 @@ const options = [
           {
             id: 'WC_2026_R1_R2',
             name: 'Round 1 & 2',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    value: 'U17 World Cup',
-    seasons: [
-      {
-        season: '2023',
-        stages: [
-          {
-            id: 'WC17_2023',
-            name: 'Final Draw',
           },
         ],
       },

@@ -1,4 +1,4 @@
-function Pots({ teams, pots, drawnTeams }) {
+function Pots({ teams, pots, drawnTeams, selectedTeam = '' }) {
   return (
     <div>
       {pots.map((pot, index) => (
@@ -11,7 +11,9 @@ function Pots({ teams, pots, drawnTeams }) {
           <tbody>
             {pot.map((team, indexteam) => (
               <tr
-                className={drawnTeams.includes(team) ? 'drawn' : undefined}
+                className={`${
+                  drawnTeams.includes(team) ? 'drawn' : undefined
+                } ${selectedTeam === team ? 'selected' : undefined}`}
                 key={'team' + indexteam}
               >
                 <td>
