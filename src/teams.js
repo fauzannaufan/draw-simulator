@@ -101,7 +101,11 @@ const teams = {
   LBN: { country: 'LBN', name: 'Lebanon' },
   MTN: { country: 'MTN', name: 'Mauritania' },
   TRI: { country: 'TRI', name: 'Trinidad and Tobago' },
-  NZL: { country: 'NZL', name: 'Aotearoa New Zealand' },
+  NZL: {
+    country: 'NZL',
+    name: 'Aotearoa New Zealand',
+    short_name: 'New Zealand',
+  },
   KAZ: { country: 'KAZ', name: 'Kazakhstan' },
   KEN: { country: 'KEN', name: 'Kenya' },
   CGO: { country: 'CGO', name: 'Congo' },
