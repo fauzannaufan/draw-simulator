@@ -2,26 +2,35 @@ import { forwardRef } from 'react';
 
 const Groups = forwardRef(
   (
-    { groups, teams, className, firstGroupLetter = 'A', selectedIndex = -1 },
+    {
+      groups,
+      teams,
+      className,
+      firstGroupLetter = 'A',
+      selectedIndex = -1,
+      hideThead = false,
+    },
     ref
   ) => {
     return (
       <div ref={ref} className={className}>
         {groups.map((group, index) => (
           <table
-            className={`pot-table group-table ${
+            className={`pot-table group-table hidethead-${hideThead} ${
               index === selectedIndex ? 'selected' : undefined
             }`}
             key={'group' + index}
           >
-            <thead>
-              <tr>
-                <th>
-                  Group{' '}
-                  {String.fromCharCode(firstGroupLetter.charCodeAt() + index)}
-                </th>
-              </tr>
-            </thead>
+            {hideThead === false && (
+              <thead>
+                <tr>
+                  <th>
+                    Group{' '}
+                    {String.fromCharCode(firstGroupLetter.charCodeAt() + index)}
+                  </th>
+                </tr>
+              </thead>
+            )}
             <tbody>
               {group.map((team, indexteam) => (
                 <tr key={'team' + indexteam}>

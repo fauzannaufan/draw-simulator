@@ -162,6 +162,23 @@ main {
   font-size: 14px;
 }
 
+.bracket-top {
+  border: 0.5px solid grey;
+  border-top: 0;
+  height: 15px;
+}
+
+.bracket-bottom {
+  border: 0.5px solid grey;
+  border-bottom: 0;
+  height: 15px;
+}
+
+.group-table.hidethead-true {
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
 /* desktop only */
 @media only screen and (min-width: 992px) {
   .div-select > select {

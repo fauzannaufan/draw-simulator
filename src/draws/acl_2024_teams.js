@@ -174,6 +174,22 @@ const teams = {
     name: 'BG Pathum United',
     short_name: 'BG Pathum',
   },
+  A1: { country: 'UAE', name: 'Al Ain' },
+  A2: { country: 'KSA', name: 'Al Fayha' },
+  B1: { country: 'UZB', name: 'Nasaf' },
+  C1: { country: 'KSA', name: 'Al Ittihad' },
+  C2: { country: 'IRN', name: 'Sepahan' },
+  D1: { country: 'KSA', name: 'Al Hilal' },
+  D2: { country: 'UZB', name: 'Navbahor' },
+  E1: { country: 'KSA', name: 'Al Nassr' },
+  F1: { country: 'THA', name: 'Bangkok United', short_name: 'Bangkok Utd' },
+  F2: { country: 'KOR', name: 'Jeonbuk Hyundai Motors', short_name: 'Jeonbuk' },
+  G1: { country: 'JPN', name: 'Yokohama F Marinos', short_name: 'Yokohama FM' },
+  G2: { country: 'CHN', name: 'Shandong Taishan', short_name: 'Shandong' },
+  H1: { country: 'JPN', name: 'Ventforet Kofu', short_name: 'Ventforet' },
+  I1: { country: 'JPN', name: 'Kawasaki Frontale', short_name: 'Frontale' },
+  I2: { country: 'KOR', name: 'Ulsan Hyundai' },
+  J1: { country: 'KOR', name: 'Pohang Steelers', short_name: 'Pohang' },
 };
 
 export default teams;

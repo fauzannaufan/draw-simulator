@@ -7,9 +7,11 @@ import Select from './components/Select';
 import ACL_2024_GS from './draws/ACL_2024_GS';
 import ACC_2024_GS from './draws/ACC_2024_GS';
 import WC17_2023 from './draws/WC17_2023';
+import ACL_2024_KO from './draws/ACL_2024_KO';
+import ACC_2024_KO from './draws/ACC_2024_KO';
 
 function App() {
-  const [selectedDraw, setSelectedDraw] = useState('WC17_2023');
+  const [selectedDraw, setSelectedDraw] = useState('ACL_2024_KO');
 
   ReactGA.initialize('G-XS6MVXWCJ1');
 
@@ -24,6 +26,10 @@ function App() {
         <ACC_2024_GS />
       ) : selectedDraw === 'WC17_2023' ? (
         <WC17_2023 />
+      ) : selectedDraw === 'ACL_2024_KO' ? (
+        <ACL_2024_KO />
+      ) : selectedDraw === 'ACC_2024_KO' ? (
+        <ACC_2024_KO />
       ) : (
         <h1>Coming Soon</h1>
       )}

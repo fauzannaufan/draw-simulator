@@ -1,11 +1,20 @@
-function Pots({ teams, pots, drawnTeams, selectedTeam = '' }) {
+function Pots({ teams, pots, drawnTeams, selectedTeam = '', labels = [] }) {
   return (
     <div>
-      {pots.map((pot, index) => (
+      {pots.map((pot, index, array) => (
         <table className="pot-table" key={'pot' + index}>
           <thead>
             <tr>
-              <th>Pot {index + 1}</th>
+              {labels.length ? (
+                <th>
+                  {labels[Math.floor(index / labels.length)]} Pot{' '}
+                  {index +
+                    1 -
+                    Math.floor(index / labels.length) * labels.length}
+                </th>
+              ) : (
+                <th>Pot {index + 1}</th>
+              )}
             </tr>
           </thead>
           <tbody>
