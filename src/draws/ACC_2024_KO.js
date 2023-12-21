@@ -40,7 +40,19 @@ function ACC_2024_KO() {
   const [positions, setPositions] = useState(clone(original_positions));
   const [drawnTeams, setDrawnTeams] = useState([]);
 
-  const drawAllTeams = () => {};
+  const drawAllTeams = () => {
+    const westpot = [...pots[0]];
+    westpot.sort((a, b) => 0.5 - Math.random());
+    westpot.forEach((team) => chooseTeam(team));
+
+    const aseanpot = [...pots[1]];
+    aseanpot.sort((a, b) => 0.5 - Math.random());
+    aseanpot.forEach((team) => chooseTeam(team));
+
+    const interzonepot = [...pots[2]];
+    interzonepot.sort((a, b) => 0.5 - Math.random());
+    interzonepot.forEach((team) => chooseTeam(team));
+  };
 
   const resetDraw = () => {
     setDrawnTeams([]);
