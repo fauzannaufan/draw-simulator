@@ -1,8 +1,8 @@
 import Groups from './Groups';
 
-const Bracket = ({ pairings, teams }) => {
+const BracketACL = ({ pairings, teams }) => {
   return (
-    <div className="center">
+    <div className="center afc-cup">
       <Groups groups={pairings.slice(0, 4)} teams={teams} hideThead={true} />
       <div
         style={{
@@ -13,9 +13,9 @@ const Bracket = ({ pairings, teams }) => {
         }}
       >
         <div />
-        <div className="bracket-top" />
+        <div className="bracket-top">QF 3</div>
         <div />
-        <div className="bracket-top" />
+        <div className="bracket-top">QF 4</div>
         <div />
       </div>
       <div
@@ -27,7 +27,7 @@ const Bracket = ({ pairings, teams }) => {
         }}
       >
         <div />
-        <div className="bracket-top" />
+        <div className="bracket-top">Semifinal East</div>
         <div />
       </div>
       <div
@@ -42,7 +42,7 @@ const Bracket = ({ pairings, teams }) => {
         }}
       >
         <div />
-        <div className="bracket-bottom" />
+        <div className="bracket-bottom">Semifinal West</div>
         <div />
       </div>
       <div
@@ -54,9 +54,9 @@ const Bracket = ({ pairings, teams }) => {
         }}
       >
         <div />
-        <div className="bracket-bottom" />
+        <div className="bracket-bottom">QF 1</div>
         <div />
-        <div className="bracket-bottom" />
+        <div className="bracket-bottom">QF 2</div>
         <div />
       </div>
       <Groups groups={pairings.slice(4, 8)} teams={teams} hideThead={true} />
@@ -64,4 +64,4 @@ const Bracket = ({ pairings, teams }) => {
   );
 };
 
-export default Bracket;
+export default BracketACL;

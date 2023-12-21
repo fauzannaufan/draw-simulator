@@ -57,7 +57,7 @@ function ACC_2024_GS() {
   const [othergroups] = useState([
     ['IND1', 'BAN1', 'MDV1', 'SPO1'],
     ['TJK1', 'TKM1', 'KGZ1', 'CPO1'],
-    ['MAC1', 'TPE1', 'MNG1', 'EPO1'],
+    ['MAC1', 'TPE1', 'MNG1', 'TPE2'],
   ]);
   const [revealTeams, setRevealTeams] = useState(false);
 

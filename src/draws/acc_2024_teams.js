@@ -131,6 +131,7 @@ const teams = {
   CAM1: {
     country: 'CAM',
     name: 'Phnom Penh Crown',
+    short_name: 'Phnom Penh',
   },
   IDN2: {
     country: 'IDN',
@@ -148,9 +149,30 @@ const teams = {
     country: 'MNG',
     name: 'Ulaanbaatar',
   },
-  EPO1: {
+  TPE2: {
     country: 'TPE',
     name: 'Taichung Futuro',
+    short_name: 'Taichung F',
+  },
+  SEA: {
+    country: '',
+    name: 'ASEAN Champions',
+  },
+  WSF1: {
+    country: 'BHR/OMA',
+    name: 'West SF 1',
+  },
+  WSF2: {
+    country: 'LBN/IRQ',
+    name: 'West SF 2',
+  },
+  ASF1: {
+    country: 'AUS/MAS',
+    name: 'ASEAN SF 1',
+  },
+  ASF2: {
+    country: 'AUS/CAM',
+    name: 'ASEAN SF 2',
   },
 };
 

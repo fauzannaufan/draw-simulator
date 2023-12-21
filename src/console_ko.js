@@ -49,8 +49,6 @@ pots[0].forEach((a, i) => {
   pot1.splice(i, 1);
   pot2.push(a);
 
-  console.log(a);
-
   permutator(pot2).forEach((c) => {
     z = pot1.map((i, j) => [i, c[j]]);
     if (!areGroupsValid(z)) return;

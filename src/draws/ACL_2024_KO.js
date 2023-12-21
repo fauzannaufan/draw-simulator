@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import Pots from '../components/Pots';
-import Bracket from '../components/Bracket';
+import BracketACL from '../components/BracketACL';
 import Balls from '../components/Balls';
 import teams from './acl_2024_teams';
 import west_probs from '../combinations/acl_2024_ko_west.json';
@@ -65,8 +65,6 @@ function ACL_2024_KO() {
   const [drawnETeams, setDrawnETeams] = useState([]);
   const [wpots, setWpots] = useState(clone(original_wpots));
   const [epots, setEpots] = useState(clone(original_epots));
-
-  console.log(pairings);
 
   const drawAllTeams = () => {
     moveWestPot1ToPot2(wpots[0][Math.floor(Math.random() * 5)]);
@@ -187,6 +185,7 @@ function ACL_2024_KO() {
         />
         {wpots[1].length === 3 && (
           <Balls
+            title="Choose team to move from West Pot 1 to West Pot 2"
             teams={teams}
             type="straight-starttop"
             drawnTeams={[]}
@@ -197,6 +196,7 @@ function ACL_2024_KO() {
         )}
         {wpots[1].length === 4 && epots[1].length === 3 && (
           <Balls
+            title="Choose team to move from East Pot 1 to East Pot 2"
             teams={teams}
             type="straight-starttop"
             drawnTeams={[]}
@@ -207,6 +207,9 @@ function ACL_2024_KO() {
         )}
         {epots[1].length === 4 && drawnWTeams.length < 8 && (
           <Balls
+            title={`Choose team to draw from West Pot ${
+              2 - Math.floor(drawnWTeams.length / 4)
+            }`}
             teams={teams}
             type="straight-startbottom"
             drawnTeams={drawnWTeams}
@@ -217,6 +220,9 @@ function ACL_2024_KO() {
         )}
         {drawnWTeams.length === 8 && drawnETeams.length < 8 && (
           <Balls
+            title={`Choose team to draw from East Pot ${
+              2 - Math.floor(drawnETeams.length / 4)
+            }`}
             teams={teams}
             type="straight-startbottom"
             drawnTeams={drawnETeams}
@@ -225,8 +231,8 @@ function ACL_2024_KO() {
             revealTeams={revealTeams}
           />
         )}
-        <h2>Knockout Stage Bracket</h2>
-        <Bracket teams={teams} pairings={pairings} />
+        {drawnETeams.length === 8 && <h2>Knockout Stage Bracket</h2>}
+        <BracketACL teams={teams} pairings={pairings} />
       </div>
     </div>
   );
