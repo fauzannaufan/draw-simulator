@@ -66,25 +66,25 @@ function ACL_2024_KO() {
   const [wpots, setWpots] = useState(clone(original_wpots));
   const [epots, setEpots] = useState(clone(original_epots));
 
-  const drawAllTeams = () => {
-    moveWestPot1ToPot2(wpots[0][Math.floor(Math.random() * 5)]);
-    moveEastPot1ToPot2(epots[0][Math.floor(Math.random() * 5)]);
+  const drawAllTeams = async () => {
+    await moveWestPot1ToPot2(wpots[0][Math.floor(Math.random() * 5)]);
+    await moveEastPot1ToPot2(epots[0][Math.floor(Math.random() * 5)]);
 
     const westpot2 = [...wpots[1]];
     westpot2.sort((a, b) => 0.5 - Math.random());
-    westpot2.forEach((team) => selectWTeam(team));
+    westpot2.forEach(async (team) => await selectWTeam(team));
 
     const westpot1 = [...wpots[0]];
     westpot1.sort((a, b) => 0.5 - Math.random());
-    westpot1.forEach((team) => selectWTeam(team));
+    westpot1.forEach(async (team) => await selectWTeam(team));
 
     const eastpot2 = [...epots[1]];
     eastpot2.sort((a, b) => 0.5 - Math.random());
-    eastpot2.forEach((team) => selectETeam(team));
+    eastpot2.forEach(async (team) => await selectETeam(team));
 
     const eastpot1 = [...epots[0]];
     eastpot1.sort((a, b) => 0.5 - Math.random());
-    eastpot1.forEach((team) => selectETeam(team));
+    eastpot1.forEach(async (team) => await selectETeam(team));
   };
 
   const resetDraw = () => {

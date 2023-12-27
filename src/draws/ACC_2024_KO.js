@@ -43,15 +43,15 @@ function ACC_2024_KO() {
   const drawAllTeams = () => {
     const westpot = [...pots[0]];
     westpot.sort((a, b) => 0.5 - Math.random());
-    westpot.forEach((team) => chooseTeam(team));
+    westpot.forEach(async (team) => await chooseTeam(team));
 
     const aseanpot = [...pots[1]];
     aseanpot.sort((a, b) => 0.5 - Math.random());
-    aseanpot.forEach((team) => chooseTeam(team));
+    aseanpot.forEach(async (team) => await chooseTeam(team));
 
     const interzonepot = [...pots[2]];
     interzonepot.sort((a, b) => 0.5 - Math.random());
-    interzonepot.forEach((team) => chooseTeam(team));
+    interzonepot.forEach(async (team) => await chooseTeam(team));
   };
 
   const resetDraw = () => {
