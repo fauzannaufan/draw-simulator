@@ -74,7 +74,13 @@ function ACC_2024_KO() {
         newPrev[9] = [...chosenTeams];
       } else {
         // interzone
-        newPrev[teamsDrawn - 4] = [team];
+        const mapping = {
+          8: 4,
+          9: 6,
+          10: 5,
+          11: 7,
+        };
+        newPrev[mapping[teamsDrawn]] = [team];
       }
       return newPrev;
     });
