@@ -1,0 +1,32 @@
+.acl2 {
+  .pot-table {
+    max-width: 165px;
+
+    th {
+      background-color: #0E58D0;
+      color: #fff;
+    }
+  }
+
+  .group-table {
+    max-width: 240px;
+  }
+
+  .regions {
+    text-align: center;
+  }
+
+  @media only screen and (min-width: 992px) {
+    .regions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    .pot-table {
+      width: calc(50% - 8px);
+    }
+  }
+}

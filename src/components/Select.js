@@ -2,6 +2,33 @@ import { useState } from 'react';
 
 const options = [
   {
+    value: 'ACL Two',
+    seasons: [
+      {
+        season: '2024-25',
+        stages: [
+          {
+            id: 'ACL2_2025_GS',
+            name: 'Group Stage',
+          },
+        ],
+      },
+      {
+        season: '2023-24',
+        stages: [
+          {
+            id: 'ACC_2024_KO',
+            name: 'Knockout Stage',
+          },
+          {
+            id: 'ACC_2024_GS',
+            name: 'Group Stage',
+          },
+        ],
+      },
+    ],
+  },
+  {
     value: 'ACL',
     seasons: [
       {
@@ -13,24 +40,6 @@ const options = [
           },
           {
             id: 'ACL_2024_GS',
-            name: 'Group Stage',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    value: 'AFC Cup',
-    seasons: [
-      {
-        season: '2023-24',
-        stages: [
-          {
-            id: 'ACC_2024_KO',
-            name: 'Knockout Stage',
-          },
-          {
-            id: 'ACC_2024_GS',
             name: 'Group Stage',
           },
         ],
