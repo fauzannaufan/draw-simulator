@@ -1,0 +1,63 @@
+.acle {
+  .pot-table {
+    max-width: 165px;
+
+    th {
+      background-color: #5f418a;
+      color: #fff;
+    }
+  }
+
+  .group-table {
+    max-width: 200px;
+  }
+
+  .regions {
+    text-align: center;
+  }
+
+  .ball-PS {
+    width: 40px;
+  }
+
+  .fixtures {
+    width: 85%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+
+    .versus {
+      background-color: #5f418a;
+      color: #fff;
+      width: 0;
+    }
+
+    td {
+      border: 1px solid black;
+      padding: 4px;
+      text-align: left;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    .regions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    .pot-table {
+      width: calc(50% - 8px);
+    }
+
+    .fixtures {
+      width: 100%;
+
+      .home-away {
+        width: 20px;
+      }
+    }
+  }
+}

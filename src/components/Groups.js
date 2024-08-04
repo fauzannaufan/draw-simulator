@@ -9,6 +9,7 @@ const Groups = forwardRef(
       firstGroupLetter = 'A',
       selectedIndex = -1,
       hideThead = false,
+      label = 'Group',
     },
     ref
   ) => {
@@ -25,7 +26,7 @@ const Groups = forwardRef(
               <thead>
                 <tr>
                   <th>
-                    Group{' '}
+                    {label}{' '}
                     {String.fromCharCode(firstGroupLetter.charCodeAt() + index)}
                   </th>
                 </tr>
