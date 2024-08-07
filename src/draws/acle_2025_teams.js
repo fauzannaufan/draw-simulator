@@ -56,7 +56,7 @@ const teams = {
     name: 'Al Shorta',
   },
   WPS: {
-    country: 'QAT/IRN/UAE',
+    country: 'QAT/UAE',
     name: 'Winner of PS',
   },
   JPN1: {

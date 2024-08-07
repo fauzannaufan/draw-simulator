@@ -5,7 +5,6 @@ import teams from './acle_2025_teams';
 import './acle_2025.scss';
 import Pots from '../components/Pots';
 import Balls from '../components/Balls';
-import west_probs_IRN from '../combinations/acle_2025_ls_west_IRN.json';
 import west_probs_QAT from '../combinations/acle_2025_ls_west_QAT.json';
 import west_probs_UAE from '../combinations/acle_2025_ls_west_UAE.json';
 import east_probs_CHN from '../combinations/acle_2025_ls_east_CHN.json';
@@ -17,7 +16,6 @@ const clone = (arr) => {
 };
 
 const original_probs = {
-  IRN: west_probs_IRN,
   QAT: west_probs_QAT,
   UAE: west_probs_UAE,
   CHN: east_probs_CHN,
@@ -40,7 +38,7 @@ const original_epots = [
   ['JPN2', 'KOR2', 'CHN2', 'JPN3', 'KOR3', 'EPS'],
 ];
 
-const W_PS = ['QAT3', 'IRN3', 'UAE3'];
+const W_PS = ['QAT3', 'UAE3'];
 const E_PS = ['CHN3', 'THA2'];
 
 const findPossibleProbs = (probs, groups) => {
@@ -169,18 +167,6 @@ function ACLE_2025_LS() {
       const possibleProbs = findPossibleProbs(probs, teamIndexGroups);
       const potIndex = Math.floor(teamsDrawn / newGroups.length / 2);
       const chosenTeamIndex = pots[potIndex].indexOf(team);
-      // const pot1teams = [
-      //   ...new Set(
-      //     possibleProbs.map((groups) => {
-      //       return groups[
-      //         groups.map((el) => el[potIndex]).indexOf(chosenTeamIndex)
-      //       ][0];
-      //     })
-      //   ),
-      // ];
-      // indexGroupToFill = teamIndexGroups
-      //   .map((group) => pot1teams.includes(group[0]))
-      //   .indexOf(true);
       const possibleGroupIndex = [
         ...new Set(
           possibleProbs.map((x) =>
@@ -251,7 +237,7 @@ function ACLE_2025_LS() {
   return (
     <div className="acle">
       <div className="center">
-        <button onClick={drawAllTeams}>Automatic Draw</button>
+        {/* <button onClick={drawAllTeams}>Automatic Draw</button> */}
         <button onClick={resetDraw}>Restart Draw</button>
         <input
           type="checkbox"

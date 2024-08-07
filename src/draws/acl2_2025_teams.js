@@ -4,7 +4,7 @@ const teams = {
     name: 'Loser ACLE PS1',
   },
   LWPS2: {
-    country: 'QAT/IRN/UAE',
+    country: 'QAT/UAE',
     name: 'Loser ACLE PS2',
   },
   KSA4: {
@@ -14,6 +14,10 @@ const teams = {
   QAT4: {
     country: 'QAT',
     name: 'Al Wakrah',
+  },
+  IRN3: {
+    country: 'IRN',
+    name: 'Sepahan',
   },
   IRN4: {
     country: 'IRN',
@@ -130,4 +134,3 @@ const teams = {
 };
 
 export default teams;
-  
