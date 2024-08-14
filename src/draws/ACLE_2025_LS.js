@@ -5,21 +5,12 @@ import teams from './acle_2025_teams';
 import './acle_2025.scss';
 import Pots from '../components/Pots';
 import Balls from '../components/Balls';
-import west_probs_QAT from '../combinations/acle_2025_ls_west_QAT.json';
-import west_probs_UAE from '../combinations/acle_2025_ls_west_UAE.json';
-import east_probs_CHN from '../combinations/acle_2025_ls_east_CHN.json';
-import east_probs_THA from '../combinations/acle_2025_ls_east_THA.json';
+import west_probs from '../combinations/acle_2025_ls_west_QAT.json';
+import east_probs from '../combinations/acle_2025_ls_east_CHN.json';
 import FixturesACLE from '../components/FixturesACLE';
 
 const clone = (arr) => {
   return JSON.parse(JSON.stringify(arr));
-};
-
-const original_probs = {
-  QAT: west_probs_QAT,
-  UAE: west_probs_UAE,
-  CHN: east_probs_CHN,
-  THA: east_probs_THA,
 };
 
 const original_groups = [
@@ -28,18 +19,15 @@ const original_groups = [
   ['', '', '', ''],
 ];
 
-const original_wpots = [
+const wpots = [
   ['UAE1', 'KSA1', 'QAT1', 'IRN1', 'UZB1', 'IRQ1'],
-  ['KSA2', 'QAT2', 'IRN2', 'UAE2', 'KSA3', 'WPS'],
+  ['KSA2', 'QAT2', 'IRN2', 'UAE2', 'KSA3', 'QAT3'],
 ];
 
-const original_epots = [
+const epots = [
   ['JPN1', 'KOR1', 'CHN1', 'THA1', 'AUS1', 'MAS1'],
-  ['JPN2', 'KOR2', 'CHN2', 'JPN3', 'KOR3', 'EPS'],
+  ['JPN2', 'KOR2', 'CHN2', 'JPN3', 'KOR3', 'CHN3'],
 ];
-
-const W_PS = ['QAT3', 'UAE3'];
-const E_PS = ['CHN3', 'THA2'];
 
 const findPossibleProbs = (probs, groups) => {
   const tempgroups = clone(groups);
@@ -63,10 +51,6 @@ const findPossibleProbs = (probs, groups) => {
 function ACLE_2025_LS() {
   const [wgroups, setWGroups] = useState(clone(original_groups));
   const [egroups, setEGroups] = useState(clone(original_groups));
-  const [wpots, setWPots] = useState(clone(original_wpots));
-  const [epots, setEPots] = useState(clone(original_epots));
-  const [west_probs, setWProbs] = useState([]);
-  const [east_probs, setEProbs] = useState([]);
   const [revealTeams, setRevealTeams] = useState(false);
 
   const drawnWTeams = useMemo(() => {
@@ -212,26 +196,6 @@ function ACLE_2025_LS() {
         return group.map((item) => '');
       });
     });
-    setWPots(clone(original_wpots));
-    setEPots(clone(original_epots));
-  };
-
-  const pickPreliminaryWinner = (region, team) => {
-    if (region === 'W') {
-      setWProbs(original_probs[team.substring(0, 3)]);
-      setWPots((prev) => {
-        const curr = JSON.parse(JSON.stringify(prev));
-        curr[1][5] = team;
-        return curr;
-      });
-    } else {
-      setEProbs(original_probs[team.substring(0, 3)]);
-      setEPots((prev) => {
-        const curr = JSON.parse(JSON.stringify(prev));
-        curr[1][5] = team;
-        return curr;
-      });
-    }
   };
 
   return (
@@ -273,30 +237,15 @@ function ACLE_2025_LS() {
           }
         >
           <Pots teams={teams} pots={wpots} drawnTeams={drawnWTeams} />
-          {wpots.flat().indexOf('WPS') !== -1 ? (
-            <>
-              <h4>Pick your Preliminary Stage winners</h4>
-              {W_PS.map((team) => (
-                <div
-                  className={`ball ball-PS ball-red reveal-team`}
-                  key={team}
-                  onClick={() => pickPreliminaryWinner('W', team)}
-                >
-                  {team}
-                </div>
-              ))}
-            </>
-          ) : (
-            wpots.flat().length > drawnWTeams.length && (
-              <Balls
-                teams={teams}
-                type="straight-starttop"
-                drawnTeams={drawnWTeams}
-                pots={wpots}
-                chooseTeam={chooseTeamWest}
-                revealTeams={revealTeams}
-              />
-            )
+          {wpots.flat().length > drawnWTeams.length && (
+            <Balls
+              teams={teams}
+              type="straight-starttop"
+              drawnTeams={drawnWTeams}
+              pots={wpots}
+              chooseTeam={chooseTeamWest}
+              revealTeams={revealTeams}
+            />
           )}
         </div>
         <div
@@ -309,21 +258,6 @@ function ACLE_2025_LS() {
         >
           <Pots teams={teams} pots={epots} drawnTeams={drawnETeams} />
           {wpots.flat().length === drawnWTeams.length &&
-          epots.flat().indexOf('EPS') !== -1 ? (
-            <>
-              <h4>Pick your Preliminary Stage winners</h4>
-              {E_PS.map((team) => (
-                <div
-                  className={`ball ball-PS ball-red reveal-team`}
-                  key={team}
-                  onClick={() => pickPreliminaryWinner('E', team)}
-                >
-                  {team}
-                </div>
-              ))}
-            </>
-          ) : (
-            wpots.flat().length === drawnWTeams.length &&
             epots.flat().length > drawnETeams.length && (
               <Balls
                 teams={teams}
@@ -333,8 +267,7 @@ function ACLE_2025_LS() {
                 chooseTeam={chooseTeamEast}
                 revealTeams={revealTeams}
               />
-            )
-          )}
+            )}
         </div>
         <Groups
           className="desktop"

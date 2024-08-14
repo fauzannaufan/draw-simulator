@@ -23,6 +23,10 @@ const teams = {
     country: 'IRN',
     name: 'Tractor',
   },
+  UAE3: {
+    country: 'UAE',
+    name: 'Shabab Al Ahli',
+  },
   UAE4: {
     country: 'UAE',
     name: 'Sharjah',
@@ -82,6 +86,10 @@ const teams = {
   CHN4: {
     country: 'CHN',
     name: 'Zhejiang',
+  },
+  THA2: {
+    country: 'THA',
+    name: 'Bangkok United',
   },
   THA3: {
     country: 'THA',
