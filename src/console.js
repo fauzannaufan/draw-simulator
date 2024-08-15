@@ -2,15 +2,15 @@ let pots = [
   ['IRN3', 'UAE3', 'KSA4', 'QAT4'],
   ['IRN4', 'UAE4', 'UZB2', 'IRQ2'],
   ['JOR1', 'TJK1', 'IND1', 'BHR1'],
-  ['JOR2', 'TJK2', 'IND/TKM', 'BHR/KUW'],
+  ['JOR2', 'TJK2', 'TKM1', 'KUW1'],
 ];
 
-pots = [
-  ['THA2', 'JPN4', 'KOR4', 'CHN4'],
-  ['THA3', 'AUS2', 'MAS2', 'VIE1'],
-  ['HKG1', 'PHI1', 'SIN1', 'THA4'],
-  ['HKG2', 'PHI2', 'SIN2', 'IDN1'],
-];
+// pots = [
+//   ['THA2', 'JPN4', 'KOR4', 'CHN4'],
+//   ['THA3', 'AUS2', 'MAS2', 'VIE1'],
+//   ['HKG1', 'PHI1', 'SIN1', 'THA4'],
+//   ['HKG2', 'PHI2', 'SIN2', 'IDN1'],
+// ];
 
 const permutator = (inputArr) => {
   let result = [];

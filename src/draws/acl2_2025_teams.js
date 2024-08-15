@@ -63,6 +63,14 @@ const teams = {
     country: 'TJK',
     name: 'Ravshan',
   },
+  TKM1: {
+    country: 'TKM',
+    name: 'Altyn Asyr',
+  },
+  KUW1: {
+    country: 'KUW',
+    name: 'Al Kuwait',
+  },
   WPS1: {
     country: 'IND/TKM',
     name: 'Winner PS1.1',

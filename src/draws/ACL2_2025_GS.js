@@ -23,7 +23,7 @@ const wpots = [
   ['IRN3', 'UAE3', 'KSA4', 'QAT4'],
   ['IRN4', 'UAE4', 'UZB2', 'IRQ2'],
   ['JOR1', 'TJK1', 'IND1', 'BHR1'],
-  ['JOR2', 'TJK2', 'WPS1', 'WPS2'],
+  ['JOR2', 'TJK2', 'TKM1', 'KUW1'],
 ];
 
 const epots = [
