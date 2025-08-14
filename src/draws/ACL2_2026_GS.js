@@ -1,12 +1,12 @@
 import { useMemo, useState } from 'react';
 import Groups from '../components/Groups';
-import teams from '../teams/acl2_2025_teams';
+import teams from '../teams/acl2_2026_teams';
 
 import '../styles/acl2_2024.scss';
 import Pots from '../components/Pots';
 import Balls from '../components/Balls';
-import west_probs from '../combinations/acl2_2025_gs_west.json';
-import east_probs from '../combinations/acl2_2025_gs_east.json';
+import west_probs from '../combinations/acl2_2026_gs_west.json';
+import east_probs from '../combinations/acl2_2026_gs_east.json';
 
 const clone = (arr) => {
   return JSON.parse(JSON.stringify(arr));
@@ -20,17 +20,17 @@ const original_groups = [
 ];
 
 const wpots = [
-  ['IRN3', 'UAE3', 'KSA4', 'QAT4'],
-  ['IRN4', 'UAE4', 'UZB2', 'IRQ2'],
-  ['JOR1', 'TJK1', 'IND1', 'BHR1'],
-  ['JOR2', 'TJK2', 'TKM1', 'KUW1'],
+  ['IRN2', 'KSA4', 'UAE4', 'QAT4'],
+  ['IRN3', 'UZB2', 'IRQ2', 'JOR1'],
+  ['BHR1', 'IND1', 'TJK1', 'TKM1'],
+  ['JOR2', 'BHR2', 'IND2', 'TKM2'],
 ];
 
 const epots = [
   ['THA2', 'JPN4', 'KOR4', 'CHN4'],
   ['THA3', 'AUS2', 'MAS2', 'VIE1'],
-  ['HKG1', 'PHI1', 'SIN1', 'THA4'],
-  ['HKG2', 'PHI2', 'SIN2', 'IDN1'],
+  ['HKG1', 'SIN1', 'PHI1', 'THA4'],
+  ['VIE2', 'HKG2', 'SIN2', 'IDN1'],
 ];
 
 const findPossibleProbs = (probs, groups) => {
@@ -52,7 +52,7 @@ const findPossibleProbs = (probs, groups) => {
   });
 };
 
-function ACL2_2025_GS() {
+function ACL2_2026_GS() {
   const [wgroups, setWGroups] = useState(clone(original_groups));
   const [egroups, setEGroups] = useState(clone(original_groups));
   const [revealTeams, setRevealTeams] = useState(false);
@@ -253,4 +253,4 @@ function ACL2_2025_GS() {
   );
 }
 
-export default ACL2_2025_GS;
+export default ACL2_2026_GS;

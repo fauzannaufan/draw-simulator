@@ -1,4 +1,4 @@
-import teams from '../teams/acle_2025_teams';
+import teams from '../teams/acle_2026_teams';
 
 const FixturesACLE = ({ region, groups }) => {
   const getTeam = (x, y) => {
@@ -62,8 +62,8 @@ const FixturesACLE = ({ region, groups }) => {
             <td>{getTeam(2, 1)}</td>
           </tr>
           <tr>
-            <td>{getTeam(2, 2)}</td>
-            <td>{getTeam(1, 3)}</td>
+            <td>{getTeam(1, 2)}</td>
+            <td>{getTeam(2, 3)}</td>
           </tr>
           <tr>
             <td rowSpan={2}>{getTeam(0, 3)}</td>
@@ -74,8 +74,8 @@ const FixturesACLE = ({ region, groups }) => {
             <td>{getTeam(1, 1)}</td>
           </tr>
           <tr>
-            <td>{getTeam(1, 2)}</td>
-            <td>{getTeam(2, 3)}</td>
+            <td>{getTeam(2, 2)}</td>
+            <td>{getTeam(1, 3)}</td>
           </tr>
           <tr>
             <td rowSpan={2}>{getTeam(1, 0)}</td>
@@ -110,8 +110,8 @@ const FixturesACLE = ({ region, groups }) => {
             <td>{getTeam(0, 1)}</td>
           </tr>
           <tr>
-            <td>{getTeam(0, 2)}</td>
-            <td>{getTeam(2, 3)}</td>
+            <td>{getTeam(2, 2)}</td>
+            <td>{getTeam(0, 3)}</td>
           </tr>
           <tr>
             <td rowSpan={2}>{getTeam(1, 3)}</td>
@@ -122,8 +122,8 @@ const FixturesACLE = ({ region, groups }) => {
             <td>{getTeam(2, 1)}</td>
           </tr>
           <tr>
-            <td>{getTeam(2, 2)}</td>
-            <td>{getTeam(0, 3)}</td>
+            <td>{getTeam(0, 2)}</td>
+            <td>{getTeam(2, 3)}</td>
           </tr>
           <tr>
             <td rowSpan={2}>{getTeam(2, 0)}</td>
@@ -158,8 +158,8 @@ const FixturesACLE = ({ region, groups }) => {
             <td>{getTeam(1, 1)}</td>
           </tr>
           <tr>
-            <td>{getTeam(1, 2)}</td>
-            <td>{getTeam(0, 3)}</td>
+            <td>{getTeam(0, 2)}</td>
+            <td>{getTeam(1, 3)}</td>
           </tr>
           <tr>
             <td rowSpan={2}>{getTeam(2, 3)}</td>
@@ -170,8 +170,8 @@ const FixturesACLE = ({ region, groups }) => {
             <td>{getTeam(0, 1)}</td>
           </tr>
           <tr>
-            <td>{getTeam(0, 2)}</td>
-            <td>{getTeam(1, 3)}</td>
+            <td>{getTeam(1, 2)}</td>
+            <td>{getTeam(0, 3)}</td>
           </tr>
         </tbody>
       </table>

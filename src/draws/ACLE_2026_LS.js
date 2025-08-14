@@ -1,13 +1,13 @@
 import { useMemo, useState } from 'react';
 import Groups from '../components/Groups';
-import teams from '../teams/acle_2025_teams';
+import teams from '../teams/acle_2026_teams';
 
 import '../styles/acle_2025.scss';
 import Pots from '../components/Pots';
 import Balls from '../components/Balls';
-import west_probs from '../combinations/acle_2025_ls_west_QAT.json';
-import east_probs from '../combinations/acle_2025_ls_east_CHN.json';
-import FixturesACLE from '../components/FixturesACLE';
+import west_probs from '../combinations/acle_2026_ls_west.json';
+import east_probs from '../combinations/acle_2026_ls_east.json';
+import FixturesACLE from '../components/FixturesACLE_2026';
 
 const clone = (arr) => {
   return JSON.parse(JSON.stringify(arr));
@@ -20,8 +20,8 @@ const original_groups = [
 ];
 
 const wpots = [
-  ['UAE1', 'KSA1', 'QAT1', 'IRN1', 'UZB1', 'IRQ1'],
-  ['KSA2', 'QAT2', 'IRN2', 'UAE2', 'KSA3', 'QAT3'],
+  ['KSA1', 'UAE1', 'QAT1', 'IRN1', 'UZB1', 'IRQ1'],
+  ['KSA2', 'UAE2', 'QAT2', 'KSA3', 'UAE3', 'QAT3'],
 ];
 
 const epots = [
@@ -48,7 +48,7 @@ const findPossibleProbs = (probs, groups) => {
   });
 };
 
-function ACLE_2025_LS() {
+function ACLE_2026_LS() {
   const [wgroups, setWGroups] = useState(clone(original_groups));
   const [egroups, setEGroups] = useState(clone(original_groups));
   const [revealTeams, setRevealTeams] = useState(false);
@@ -298,4 +298,4 @@ function ACLE_2025_LS() {
   );
 }
 
-export default ACLE_2025_LS;
+export default ACLE_2026_LS;

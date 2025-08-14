@@ -5,6 +5,15 @@ const options = [
     value: 'ACL Elite',
     seasons: [
       {
+        season: '2025-26',
+        stages: [
+          {
+            id: 'ACLE_2026_LS',
+            name: 'League Stage',
+          },
+        ],
+      },
+      {
         season: '2024-25',
         stages: [
           {
@@ -31,6 +40,15 @@ const options = [
   {
     value: 'ACL Two',
     seasons: [
+      {
+        season: '2025-26',
+        stages: [
+          {
+            id: 'ACL2_2026_GS',
+            name: 'Group Stage',
+          },
+        ],
+      },
       {
         season: '2024-25',
         stages: [

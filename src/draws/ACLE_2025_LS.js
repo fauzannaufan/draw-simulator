@@ -7,7 +7,7 @@ import Pots from '../components/Pots';
 import Balls from '../components/Balls';
 import west_probs from '../combinations/acle_2025_ls_west_QAT.json';
 import east_probs from '../combinations/acle_2025_ls_east_CHN.json';
-import FixturesACLE from '../components/FixturesACLE';
+import FixturesACLE from '../components/FixturesACLE_2025';
 
 const clone = (arr) => {
   return JSON.parse(JSON.stringify(arr));
