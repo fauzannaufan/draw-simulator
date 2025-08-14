@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Pots from '../components/Pots';
 import BracketACL from '../components/BracketACL';
 import Balls from '../components/Balls';
-import teams from './acl_2024_teams';
+import teams from '../teams/acl_2024_teams';
 import west_probs from '../combinations/acl_2024_ko_west.json';
 import east_probs from '../combinations/acl_2024_ko_east.json';
 

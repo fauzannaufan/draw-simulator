@@ -89,6 +89,8 @@ function Select({ setSelectedDraw }) {
   const [selectedComp, setSelectedComp] = useState(options[0]);
   const [selectedSeason, setSelectedSeason] = useState(options[0].seasons[0]);
 
+  console.log(selectedComp, selectedSeason);
+
   return (
     <div className="div-select">
       <h2>Footyrankings Draw Simulator</h2>
@@ -99,6 +101,7 @@ function Select({ setSelectedDraw }) {
           setSelectedSeason(comp.seasons[0]);
           setSelectedDraw(comp.seasons[0].stages[0].id);
         }}
+        value={selectedComp.value}
       >
         {options.map((option) => (
           <option key={option.value}>{option.value}</option>
@@ -112,6 +115,7 @@ function Select({ setSelectedDraw }) {
           setSelectedSeason(season);
           setSelectedDraw(season.stages[0].id);
         }}
+        value={selectedSeason.season}
       >
         {selectedComp.seasons.map((option) => (
           <option key={option.season}>{option.season}</option>

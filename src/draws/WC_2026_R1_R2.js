@@ -6,7 +6,7 @@ import Results from '../components/Results';
 import Balls from '../components/Balls';
 import Groups from '../components/Groups';
 
-import './wc_2026.scss';
+import '../styles/wc_2026.scss';
 
 const pots = [
   ['HKG', 'IDN', 'TPE', 'MDV', 'YEM', 'AFG', 'SGP', 'MYA', 'NEP', 'CAM'],

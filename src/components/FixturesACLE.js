@@ -1,4 +1,4 @@
-import teams from '../draws/acle_2025_teams';
+import teams from '../teams/acle_2025_teams';
 
 const FixturesACLE = ({ region, groups }) => {
   const getTeam = (x, y) => {

@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import Pots from '../components/Pots';
 import Balls from '../components/Balls';
-import teams from './acc_2024_teams';
+import teams from '../teams/acc_2024_teams';
 import BracketACC from '../components/BracketACC';
 
 const clone = (arr) => {

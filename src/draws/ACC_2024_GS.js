@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'react';
 import Groups from '../components/Groups';
-import teams from './acc_2024_teams';
+import teams from '../teams/acc_2024_teams';
 
-import './acc_2024.scss';
+import '../styles/acc_2024.scss';
 import Pots from '../components/Pots';
 import Balls from '../components/Balls';
 import west_probs from '../combinations/acc_2024_gs_west.json';
